@@ -1,0 +1,10 @@
+<div class="premio-container" [ngClass]="{ 'ganador': esGanador, 'perdedor': !esGanador }">
+    <div class="medio-circulo" *ngIf="esGanador">
+      <img src="assets/premios/corona.png" alt="Corona" class="corona" />
+    </div>
+    <div class="contenido">
+      <h2>{{ titulo }}</h2>
+      <p>{{ descripcion }}</p>
+      <img *ngIf="icono" [src]="icono" alt="Icono premio" class="icono-premio" />
+    </div>
+  </div>

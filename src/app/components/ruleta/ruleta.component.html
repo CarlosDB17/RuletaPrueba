@@ -1,0 +1,22 @@
+<div class="ruleta-container" (click)="girar()">
+    <div
+      *ngFor="let gajo of gajos; let i = index"
+      class="gajo-container"
+      [style.transform]="'rotate(' + (i * (360 / gajos.length)) + 'deg)'"
+    >
+      <app-gajo [gajo]="gajo" [selected]="i === selectorIndex"></app-gajo>
+    </div>
+
+    <div class="centro" *ngIf="premioIndex === null">
+      <img src="assets/logo_circular.png" alt="Logo Circular" class="logo-circular" />
+    </div>
+
+    <div class="centro" *ngIf="premioIndex !== null">
+      <app-premio
+        [titulo]="gajos[premioIndex!].titulo!"
+        [descripcion]="gajos[premioIndex!].descripcion!"
+        [icono]="gajos[premioIndex!].icono!"
+        [esGanador]="gajos[premioIndex!].tipo === 'premio'"
+      ></app-premio>
+    </div>
+  </div>

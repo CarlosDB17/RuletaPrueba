@@ -1,0 +1,51 @@
+.premio-container {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+  }
+  
+  .ganador {
+    background-color: #e10a50;
+    color: #ffffff;
+  }
+  
+  .perdedor {
+    border: 4px solid #3c3c37;
+    color: #3c3c37;
+  }
+  
+  .medio-circulo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #b99b1e;
+    border-top-left-radius: 180px;
+    border-top-right-radius: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .corona {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contenido h2,
+  .contenido p {
+    margin: 0;
+  }
+  
+  .icono-premio {
+    width: 50px;
+    margin-top: 8px;
+  }
