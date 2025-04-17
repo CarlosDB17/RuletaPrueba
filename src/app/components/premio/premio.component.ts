@@ -13,4 +13,5 @@ export class PremioComponent {
   @Input() descripcion: string = '';
   @Input() icono: string = '';
   @Input() esGanador: boolean = true;
+  @Input() colorGajo: string = '';
 }

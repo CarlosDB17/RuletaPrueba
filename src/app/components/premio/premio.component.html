@@ -1,5 +1,5 @@
-<div class="premio-container" [ngClass]="{ 'ganador': esGanador, 'perdedor': !esGanador }">
-    <div class="medio-circulo" *ngIf="esGanador">
+<div class="premio-container" [ngClass]="{ 'perdedor': !esGanador }" [ngStyle]="esGanador && colorGajo ? {'background-color': colorGajo} : {}">
+    <div class="medio-circulo" *ngIf="esGanador" [ngStyle]="colorGajo ? {'background-color': colorGajo} : {}">
       <img src="assets/premios/corona.png" alt="Corona" class="corona" />
     </div>
     <div class="contenido">
