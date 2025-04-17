@@ -16,8 +16,9 @@
         [titulo]="gajos[premioIndex!].titulo!"
         [descripcion]="gajos[premioIndex!].descripcion!"
         [icono]="gajos[premioIndex!].icono!"
-        [esGanador]="gajos[premioIndex!].tipo === 'premio'"
+        [esGanador]="gajos[premioIndex!].tipo === 'premio' || gajos[premioIndex!].tipo === 'prize-moment'"
         [colorGajo]="gajos[premioIndex!].color"
+        [tipo]="gajos[premioIndex!].tipo"
       ></app-premio>
     </div>
   </div>

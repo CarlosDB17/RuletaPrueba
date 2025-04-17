@@ -14,4 +14,5 @@ export class PremioComponent {
   @Input() icono: string = '';
   @Input() esGanador: boolean = true;
   @Input() colorGajo: string = '';
+  @Input() tipo: string = 'premio';
 }

@@ -1,10 +1,32 @@
-<div class="premio-container" [ngClass]="{ 'perdedor': !esGanador }" [ngStyle]="esGanador && colorGajo ? {'background-color': colorGajo} : {}">
-    <div class="medio-circulo" *ngIf="esGanador" [ngStyle]="colorGajo ? {'background-color': colorGajo} : {}">
-      <img src="assets/premios/corona.png" alt="Corona" class="corona" />
-    </div>
-    <div class="contenido">
-      <h2>{{ titulo }}</h2>
-      <p>{{ descripcion }}</p>
-      <img *ngIf="icono" [src]="icono" alt="Icono premio" class="icono-premio" />
+<!-- Prize Moment: Medio círculo inferior con corona -->
+<div *ngIf="tipo === 'prize-moment'" class="premio-container prize-moment" [ngStyle]="{'border-color': colorGajo}">
+  <div class="medio-circulo-inferior" [ngStyle]="{'background-color': colorGajo}">
+    <div class="texto-premio">
+      <h2>¡FELICIDADES HAS GANADO EL PRIMER PREMIO!</h2>
     </div>
   </div>
+  <div class="corona-container">
+    <img src="assets/premios/corona.png" alt="Corona" class="corona-premio" />
+  </div>
+</div>
+
+<!-- Premio normal: Círculo completo con mitad superior coloreada -->
+<div *ngIf="tipo === 'premio' && esGanador" class="premio-container premio-normal" [ngStyle]="{'border-color': colorGajo}">
+  <div class="medio-circulo-superior" [ngStyle]="{'background-color': colorGajo}">
+    <div class="texto-premio">
+      <h2>¡Enhorabuena has ganado...</h2>
+      <p>{{ titulo }}!</p>
+    </div>
+  </div>
+  <div class="icono-container">
+    <img *ngIf="icono" [src]="icono" alt="Icono premio" class="icono-premio" />
+  </div>
+</div>
+
+<!-- No es ganador -->
+<div *ngIf="!esGanador" class="premio-container perdedor">
+  <div class="contenido">
+    <h2>{{ titulo }}</h2>
+    <p>{{ descripcion }}</p>
+  </div>
+</div>

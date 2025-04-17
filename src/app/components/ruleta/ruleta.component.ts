@@ -46,10 +46,13 @@ export class RuletaComponent implements OnInit {
         this.girando = false;
         const gajoGanador = this.gajos[this.premioIndex];
         console.log(`¡RESULTADO FINAL! - ${gajoGanador.titulo} - Color: ${gajoGanador.color} - Tipo: ${gajoGanador.tipo}`);
-        if (gajoGanador.tipo === 'premio') {
-          console.log('¡FELICIDADES! Has ganado un premio');
+        
+        if (gajoGanador.tipo === 'prize-moment') {
+          console.log('¡FELICIDADES! Has ganado el PRIMER PREMIO');
+        } else if (gajoGanador.tipo === 'premio') {
+          console.log(`¡Enhorabuena has ganado ${gajoGanador.titulo}!`);
         } else {
-          console.log(' Lo siento, no has ganado esta vez');
+          console.log('Lo siento, no has ganado esta vez');
         }
       }
     }, 100);
