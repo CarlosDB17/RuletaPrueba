@@ -2,32 +2,37 @@
   display: block;
   width: 150px;
   height: 75px;
+  position: relative;
 }
 
 .gajo-wrapper {
-  transform: rotate(250deg); /* Rotamos el gajo para que apunte en la dirección correcta */
+  transform: rotate(250deg);
+  position: relative;
 }
 
 svg {
   display: block;
+  /* Ajustamos el tamaño para que el gajo se adentre más */
+  width: 115%;
+  height: 115%;
+  transform-origin: right center;
 }
 
 path {
-  transition: stroke 0.2s;
+  transition: all 0.2s ease;
 }
 
-// Estas clases se mantienen por compatibilidad pero ya no se usan con el nuevo diseño SVG
+/* Mantenemos las clases por compatibilidad */
 .gajo {
   width: 100%;
   height: 100%;
   clip-path: polygon(50% 50%, 100% 0, 100% 100%);
   transform-origin: center bottom;
   position: absolute;
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .selected {
   box-shadow: none;
-  border: 33px solid #B99B1E; /* Borde dorado */
-  color: #B99B1E; /* Color dorado */
+  border: 33px solid #B99B1E;
+  color: #B99B1E;
 }
