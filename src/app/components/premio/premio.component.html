@@ -14,8 +14,8 @@
 <div *ngIf="tipo === 'premio' && esGanador" class="premio-container premio-normal" [ngStyle]="{'border-color': colorGajo}">
   <div class="medio-circulo-superior" [ngStyle]="{'background-color': colorGajo}">
     <div class="texto-premio">
-      <h2>¡Enhorabuena has ganado...</h2>
       <p>{{ titulo }}!</p>
+      <p>{{ descripcion }}</p>
     </div>
   </div>
   <div class="icono-container">

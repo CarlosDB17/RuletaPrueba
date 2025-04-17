@@ -1,14 +1,16 @@
-
 .gajo {
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(50% 50%, 100% 0, 100% 100%);
-    transform-origin: center bottom;
-    position: absolute;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .selected {
-    transform: scale(1.1);
-    box-shadow: 0 0 8px #B99B1E;
-  }
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 50%, 100% 0, 100% 100%);
+  transform-origin: center bottom;
+  position: absolute;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+// Eliminé el efecto de "bote" al seleccionar un gajo y apliqué un borde dorado al estado seleccionado
+.selected {
+
+  box-shadow: none;
+  border: 33px solid #B99B1E; /* Borde dorado */
+  color: #B99B1E; /* Color dorado */
+}
