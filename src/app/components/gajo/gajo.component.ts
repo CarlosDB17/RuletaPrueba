@@ -12,4 +12,9 @@ import { Gajo } from '../../models/gajo.model';
 export class GajoComponent {
   @Input() gajo!: Gajo;
   @Input() selected: boolean = false;
+  @Input() tamano: number = 150;
+
+  calcAltura(tamano: number): number {
+    return tamano / 0.3;
+  }
 }

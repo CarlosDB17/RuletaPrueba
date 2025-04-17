@@ -1,9 +1,24 @@
-<div
-  class="gajo"
-  [ngClass]="{ 'selected': selected }"
-  [ngStyle]="{
-    'background-color': gajo.color,
-    'border-right': '1px solid #ffffff'
-  }"
-></div>
+<div class="gajo-wrapper">
+  <svg
+    [attr.width]="tamano"
+    [attr.height]="calcAltura(tamano)"
+    viewBox="0 0 200 100"
+    preserveAspectRatio="xMidYMid meet"
+  >
+    <path
+      d="M20,10 
+         Q15,10 15,20 
+         L15,80 
+         Q15,90 25,90 
+         L180,50 
+         Q190,50 180,45 
+         Z"
+      [attr.fill]="gajo.color"
+      [attr.stroke]="selected ? '#B99B1E' : '#000000'"
+      stroke-width="5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</div>
 

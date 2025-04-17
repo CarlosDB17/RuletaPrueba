@@ -1,3 +1,22 @@
+:host {
+  display: block;
+  width: 150px;
+  height: 75px;
+}
+
+.gajo-wrapper {
+  transform: rotate(250deg); /* Rotamos el gajo para que apunte en la dirección correcta */
+}
+
+svg {
+  display: block;
+}
+
+path {
+  transition: stroke 0.2s;
+}
+
+// Estas clases se mantienen por compatibilidad pero ya no se usan con el nuevo diseño SVG
 .gajo {
   width: 100%;
   height: 100%;
@@ -7,9 +26,7 @@
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-// Eliminé el efecto de "bote" al seleccionar un gajo y apliqué un borde dorado al estado seleccionado
 .selected {
-
   box-shadow: none;
   border: 33px solid #B99B1E; /* Borde dorado */
   color: #B99B1E; /* Color dorado */
